@@ -2,11 +2,11 @@
 # -*- coding: utf-8 -*-
 import gmpy2
 
-sup_F = 0.4
 sup_F = 0.5
 sup_F = 0.6
 sup_F = 0.7
 sup_F = 0.9
+sup_F = 0.4
 
 maxlen = 0
 prp_num = 0
