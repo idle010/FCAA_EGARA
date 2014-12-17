@@ -8,6 +8,8 @@ Center for Radio Administration and Technology Development, Xihua University ( h
 支持系统 Linux\ Windows。
 
 
+
+
 命令行参数
 1.生成基到文件root.txt
 python genroot.py
