@@ -1,11 +1,14 @@
 
-西华大学，无线电管理研究中心( http://tzb.xhu.edu.cn )
-Center for Radio Administration and Technology Development, Xihua University ( http://tzb.xhu.edu.cn )
+西华大学，无线电管理研究中心
+Center for Radio Administration and Technology Development, Xihua University
+( http://tzb.xhu.edu.cn )
 
 快速概念格生成算法-基于概念格的关联规则挖掘。
 
 安装
 支持系统 Linux\ Windows。
+
+
 
 
 命令行参数
