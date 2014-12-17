@@ -59,8 +59,6 @@ def getroot():
     return roots
 
 
-# 支持度
-# 【x1,x2...】列的交
 def getsup(obj):
     sups = "1" * obj_num
     sups_gmp = gmpy2.mpz(sups, 2)
