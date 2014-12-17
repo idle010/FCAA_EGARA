@@ -1,42 +1,36 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import gmpy2
+import sys
 
-sup_F = 0.5
-sup_F = 0.6
-sup_F = 0.7
-sup_F = 0.9
-sup_F = 0.4
 
 maxlen = 0
 prp_num = 0
 obj_num = 0
 
-filename = "src_web.txt"
-filename = "src_connect4.txt"
-filename = "cpsrc1.txt"
-filename = "src1.txt"
-filename = "src_chess.txt"
-filename = "src_zoo.txt"
-filename = "src_mushroom.txt"
-
 object_ss = []
-
-fac_lines = open(filename).readlines()
-fac_lines = [c.strip("\n").strip() for c in fac_lines]
-while "" in fac_lines:
-    fac_lines.remove("")
-prp_num = len(fac_lines[0])
-obj_num = len(fac_lines)
-
-fac_ver = [''] * prp_num
-
-for i in range(0, prp_num):
-    for j in range(0, obj_num):
-        fac_ver[i] += fac_lines[j][i]
+fac_lines = []
+fac_ver = []
 
 
-def getroot():
+def init(filename):
+    global fac_lines
+    global fac_ver
+    global obj_num
+
+    fac_lines = open(filename).readlines()
+    fac_lines = [c.strip("\n").strip() for c in fac_lines]
+    while "" in fac_lines:
+        fac_lines.remove("")
+    prp_num = len(fac_lines[0])
+    obj_num = len(fac_lines)
+    fac_ver = [''] * prp_num
+    for i in range(0, prp_num):
+        for j in range(0, obj_num):
+            fac_ver[i] += fac_lines[j][i]
+
+
+def getroot(filename):
     lines = []
     for li in open(filename):
         li = li.strip("\n")
@@ -77,8 +71,16 @@ def getsup(obj):
     return tmp_lie, round(total_one * 1.0 / obj_num, 6)
 
 if __name__ == '__main__':
+    if len(sys.argv) != 3:
+        print "usage:python genroot source sup"
+        sys.exit(0)
+
+    filename = sys.argv[1]
+    sup_F = float(sys.argv[2])
     files = open("root.txt", "w")
-    for i in getroot():
+
+    init(filename)
+    for i in getroot(filename):
         tmp = gmpy2.digits(i, 2)
         tmp = "0" * (maxlen - len(tmp)) + tmp
 
