@@ -3,7 +3,6 @@
 import gmpy2
 import sys
 
-
 maxlen = 0
 prp_num = 0
 obj_num = 0
@@ -17,14 +16,17 @@ def init(filename):
     global fac_lines
     global fac_ver
     global obj_num
+    global prp_num
 
     fac_lines = open(filename).readlines()
     fac_lines = [c.strip("\n").strip() for c in fac_lines]
     while "" in fac_lines:
         fac_lines.remove("")
+
     prp_num = len(fac_lines[0])
     obj_num = len(fac_lines)
     fac_ver = [''] * prp_num
+
     for i in range(0, prp_num):
         for j in range(0, obj_num):
             fac_ver[i] += fac_lines[j][i]
