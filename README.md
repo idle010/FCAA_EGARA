@@ -1,11 +1,11 @@
 
-Center for Radio Administration and Technology Development, Xihua University
+Center for Radio Administration and Technology Development, Xihua University <br>
 ( http://tzb.xhu.edu.cn )
 
-usage:
-python genroot.py dataset/mushroom/mushroom_src.txt 0.3
-python fcaa.py dataset/mushroom/mushroom_src.txt 0.3
-python gencrm.py dataset/mushroom/mushroom_src.txt
+usage: <br>
+python genroot.py dataset/mushroom/mushroom_src.txt 0.3 <br>
+python fcaa.py dataset/mushroom/mushroom_src.txt 0.3 <br>
+python gencrm.py dataset/mushroom/mushroom_src.txt <br>
 
 
 
